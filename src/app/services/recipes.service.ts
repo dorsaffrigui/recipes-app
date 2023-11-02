@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, map, of, shareReplay, tap } from 'rxjs';
+import { Recipe } from '../models/recipe';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,21 @@ export class RecipesService {
 
   constructor(private http: HttpClient) { }
 
-  getAll() :Observable<any>{
-    return this.http.get<any>(this.apiUrl).pipe(
+
+  recipes$ = this.http.get<Recipe[]>(this.apiUrl).pipe(
+    shareReplay(1),
+    catchError(this.handleError<any>(`fetch actors`))
+  );
+
+  getRecipeById(id: number) : Observable<Recipe> {
+    return this.http.get<Recipe>(`${this.apiUrl}/${id}`).pipe(
+      map((data) => (Array.isArray(data) && data.length > 0 ? data[0] : null)),
+      shareReplay(1),
       catchError(this.handleError<any>(`fetch actors`))
     );
+  
   }
+
 
     /**
 * Handle Http operation that failed.

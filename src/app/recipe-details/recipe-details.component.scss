@@ -1,0 +1,50 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-size: 16px;
+    font-weight: 300;
+    color: #43484D;
+    line-height: 24px;
+    font-family: Roboto;
+  }
+  
+  .image {
+    flex: 40%;
+
+    img{
+        width: 400px;
+        height: 400px;
+        overflow: hidden; /* Clip any content that exceeds the container */
+        background-size: cover; /* Crop the image to cover the entire container */
+        background-position: center;
+    }
+
+  }
+  
+  .recipe-details {
+    flex: 60%;
+  }
+  
+h1 {
+    font-size: 52px;
+
+}
+
+h2 {
+    font-size: 32px;
+    }
+
+p {
+    font-size: 16px;
+    color: #86939e;
+}
+
+ol,ul li {
+    font-size: 16px;
+    color: #86939e;
+}
+
+
