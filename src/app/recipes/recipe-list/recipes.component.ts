@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecipesService } from '../services/recipes.service';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import {
   BehaviorSubject,
-  Observable,
+  EMPTY,
+  catchError,
   combineLatest,
   map,
-  share,
   shareReplay,
 } from 'rxjs';
 import { Router, RouterModule } from '@angular/router';
@@ -20,9 +18,10 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
-  selector: 'recipes-list',
+  selector: 'app-recipes-list',
   standalone: true,
   imports: [
     CommonModule,
@@ -33,7 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule,
+    MatIconModule
   ],
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss'],
@@ -69,7 +68,7 @@ export class RecipesComponent {
     this.searchActionSubjet.next(event.target.value);
   }
 
-  goToPage(id: string) {
+  goToPage(id: number) {
     this.router.navigateByUrl('recipe/' + id);
   }
 }
