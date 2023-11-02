@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 32px;
+
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  h1 {
+    font-size: clamp(32px, 4vw, 52px);
+  }
+  
+  h2 {
+    font-size: clamp(16px, 4vw, 32px);
+  }
+  
+  p,
+  ol,
+  ul li {
+    font-size: 16px;
+    color: #86939e;
+  }
+}
