@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'home',
+  selector: 'app-home',
   standalone: true,
   imports: [CommonModule, MatButtonModule, RouterModule],
   templateUrl: './home.component.html',
