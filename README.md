@@ -1,27 +1,40 @@
-# RecipesApp
+# Recipes App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+An angular application that displays recipes from this
+[API](https://recipesapi.kutaybekleric.com/recipes/)
+, allows filtering, and provides more details about a specific recipe.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p align="center">
+  <img width= "500px" src="./assets/cover.png" alt="Sample app gif"/>
+</p>
 
-## Code scaffolding
+<br/>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Live Demo 👉🏼 : https://dorsaffrigui.github.io/recipes-app
 
-## Build
+## 🚀 Quick Start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install dependencies :
+```
+npm install
+```
+
+Start the angular app and the server
+
+```
+npm run start      # Build the client and then starts the server in watch mode
+```
+<br>
+
+Go to http://localhost:4200 and enjoy the demo application 😊
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To execute the unit tests via [Karma](https://karma-runner.github.io)
 
-## Running end-to-end tests
+```
+npm run test     
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

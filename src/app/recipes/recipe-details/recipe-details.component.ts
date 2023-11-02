@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { RecipesService } from '../../services/recipes.service';
-import { Recipe } from '../../models/recipe';
+import { RecipesService } from '../services/recipes.service';
+import { Recipe } from '../models/recipe';
 import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
