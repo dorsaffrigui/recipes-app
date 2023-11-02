@@ -36,7 +36,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/recipes-app/",
               "budgets": [
                 {
                   "type": "initial",
