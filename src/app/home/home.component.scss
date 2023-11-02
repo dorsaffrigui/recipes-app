@@ -1,0 +1,34 @@
+
+.mat-mdc-raised-button:not(:disabled) {
+    --mdc-protected-button-container-color: cadetblue;
+}
+.image-bg {
+    background: linear-gradient(rgba(8,8,8,.3),rgba(8,8,8,.3)),url(https://res.cloudinary.com/ddk6dro8q/image/upload/v1698917965/samples/food/fish-vegetables.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.text {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+
+
+    h1 {
+        color:white;
+        font-family: 'Roboto';font-size: 56px;
+    }
+
+    button {
+        padding: 24px;
+        font-size: 16px;
+    }
+
+}
