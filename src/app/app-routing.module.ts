@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'home',
     loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
+  {
+    path: 'recipes',
+    loadComponent: () => import('./recipes/recipes.component').then(m => m.RecipesComponent)
+  }
 ];
 
 @NgModule({
