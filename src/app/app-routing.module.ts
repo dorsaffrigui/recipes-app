@@ -10,11 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'recipes',
-    loadComponent: () => import('./recipes/recipes.component').then(m => m.RecipesComponent)
+    loadComponent: () => import('./recipes/feature/recipe-list/recipes.component').then(m => m.RecipesComponent)
   },
   {
     path: 'recipe/:id',
-    loadComponent: () => import('./recipe-details/recipe-details.component').then(m => m.RecipeDetailsComponent)
+    loadComponent: () => import('./recipes/feature/recipe-details/recipe-details.component').then(m => m.RecipeDetailsComponent)
   }
 ];
 

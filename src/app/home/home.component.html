@@ -1,10 +1,6 @@
-<div class="image-bg">
-
-    <div class="text">
-        <h1 class="title">Get inspired</h1>
-        <!-- <button mat-raised-button >Search recipes</button> -->
-
-        <button  mat-raised-button color="primary">  <a [routerLink]="['/recipes']">Search recipes</a></button>
+<div class="bg-image">
+    <div class="welcome-text">
+        <h1 class="title">Get Inspired</h1>
+        <button  mat-raised-button color="primary" (click)="gotToPage('/recipes')">Search recipes</button>
     </div>
-  
 </div>
