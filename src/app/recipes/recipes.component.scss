@@ -7,3 +7,20 @@
 button {
     margin-right: 8px;
 }
+
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: white;
+    }
+}
+
+.fixed-size-image {
+    width: 400px;
+    height: 400px;
+    overflow: hidden; /* Clip any content that exceeds the container */
+    background-size: cover; /* Crop the image to cover the entire container */
+    background-position: center;
+  }
