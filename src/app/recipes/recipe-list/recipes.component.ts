@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecipesService } from '../services/recipes.service';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import {
   BehaviorSubject,
   EMPTY,
@@ -11,26 +9,24 @@ import {
   map
 } from 'rxjs';
 import { Router, RouterModule } from '@angular/router';
-import { MatChipsModule } from '@angular/material/chips';
 import { Recipe } from '../models/recipe';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { RecipeCardComponent } from '../recipe-card/recipe-card.component';
 
 @Component({
   selector: 'app-recipes-list',
   standalone: true,
   imports: [
     CommonModule,
-    MatCardModule,
-    MatButtonModule,
     RouterModule,
-    MatChipsModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    RecipeCardComponent
   ],
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss'],

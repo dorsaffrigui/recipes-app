@@ -11,31 +11,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 24px;
   cursor: pointer;
-
-
-  img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    align-self: center;
-  }
-
-  mat-card {
-    padding: 16px;
-  }
-  mat-card-content {
-    flex-grow: 1;
-  }
-  mat-card-title {
-    color: #43484d;
-  }
-
-  mat-card-actions {
-    margin-top: 16px;
-  }
-  .mdc-card__actions {
-    align-self: center;
-  }
 }
 
 .alert {
