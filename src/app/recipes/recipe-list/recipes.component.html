@@ -6,31 +6,12 @@
 
 <div class="content">
   <div *ngIf="recipesFiltered$ | async as recipes" class="cards">
-    <mat-card class="card" *ngFor="let recipe of recipes" (click)="goToPage(recipe.id)">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{ recipe.name }}</mat-card-title>
-      </mat-card-header>
-      <img
-        mat-card-image
-        src="{{ recipe.image }}"
-        alt="Photo of a Shiba Inu"
-      />
-      <mat-card-content>
-        <p>
-          {{ recipe.description }}
-        </p>
-        <mat-chip-listbox aria-label="Fish selection" *ngIf="recipe.tags">
-          <mat-chip-option color="accent" *ngFor="let tag of recipe.tags">
-            {{ tag }}</mat-chip-option
-          >
-        </mat-chip-listbox>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="goToPage(recipe.id)">
-          Details
-        </button>
-      </mat-card-actions>
-    </mat-card>
+    <app-recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"
+      (cardClicked)="goToPage($event)"></app-recipe-card>
   </div>
+</div>
+
+<div class="alert" *ngIf="errorMessage">
+  <strong>Error!</strong>
+  <span> {{ errorMessage}}</span>
 </div>

@@ -13,7 +13,7 @@ const routes: Routes = [
     loadComponent: () => import('./recipes/recipe-list/recipes.component').then(m => m.RecipesComponent)
   },
   {
-    path: 'recipe/:id',
+    path: 'recipes/:id',
     loadComponent: () => import('./recipes/recipe-details/recipe-details.component').then(m => m.RecipeDetailsComponent)
   }
 ];
