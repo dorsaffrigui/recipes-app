@@ -8,8 +8,7 @@ import {
   EMPTY,
   catchError,
   combineLatest,
-  map,
-  shareReplay,
+  map
 } from 'rxjs';
 import { Router, RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-recipes-list',
@@ -39,15 +37,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class RecipesComponent {
   filter: { title?: string; tags?: string } = {};
+  errorMessage!: string
 
-  constructor(private recipesService: RecipesService, private router: Router) {}
+  constructor(private recipesService: RecipesService, private router: Router) { }
 
   //Reacts to search key change
   private searchActionSubjet = new BehaviorSubject<string>('');
   searchSelectedAction$ = this.searchActionSubjet.asObservable();
 
-  recipes$ = this.recipesService.recipes$;
+  //fetch recipes
+  recipes$ = this.recipesService.recipes$.pipe(
+    catchError(err => {
+      this.errorMessage = err;
+      return EMPTY;
+    }));
 
+  //every time a new search key is emitted by searchActionSubjet, the recipes are filtered based on that new search key
   recipesFiltered$ = combineLatest([
     this.recipes$,
     this.searchSelectedAction$,
@@ -60,15 +65,14 @@ export class RecipesComponent {
             tag.toLowerCase().includes(searchKey.toLowerCase())
           )
       )
-    ),
-    shareReplay(1)
+    )
   );
 
-  onSearchChange(event: any) {
-    this.searchActionSubjet.next(event.target.value);
+  onSearchChange(event: Event) {
+    this.searchActionSubjet.next((event.target as HTMLInputElement).value);
   }
 
   goToPage(id: number) {
-    this.router.navigateByUrl('recipe/' + id);
+    this.router.navigate(['/recipes', id]);
   }
 }
