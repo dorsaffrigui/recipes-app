@@ -1,11 +1,11 @@
 <div class="container" *ngIf="recipe">
   <div>
-    <img src="{{ recipe.image }}" alt="{{ recipe.name }}" />
+    <img src="{{ recipe.image_url }}" alt="{{ recipe.title }}" />
   </div>
 
   <div class="details">
     <div class="description">
-      <h1>{{ recipe.name }}</h1>
+      <h1>{{ recipe.image_url }}</h1>
       <p>{{ recipe.description }}</p>
       <mat-chip-set *ngIf="recipe.tags">
         <mat-chip class="example-box" *ngFor="let tag of recipe.tags">
@@ -24,7 +24,7 @@
     <div class="steps">
       <h2>Steps</h2>
       <ol>
-        <li *ngFor="let step of recipe.steps">{{ step }}</li>
+        <li *ngFor="let step of recipe.instructions">{{ step }}</li>
       </ol>
     </div>
   </div>

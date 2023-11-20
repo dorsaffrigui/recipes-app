@@ -2,15 +2,15 @@
   <mat-card (click)="goToPage(recipe.id)">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ recipe.name }}</mat-card-title>
+      <mat-card-title>{{ recipe.title }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{ recipe.image }}" alt="{{ recipe.name }}" />
+    <img mat-card-image src="{{ recipe.image_url }}" alt="{{ recipe.title }}" />
     <mat-card-content>
       <p>
         {{ recipe.description }}
       </p>
       <mat-chip-set *ngIf="recipe.tags">
-        <mat-chip class="example-box" *ngFor="let tag of recipe.tags">
+        <mat-chip class="example-box" *ngFor="let tag of recipe.categories">
           {{ tag }}
         </mat-chip>
       </mat-chip-set>

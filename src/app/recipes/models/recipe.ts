@@ -1,9 +1,10 @@
 export interface Recipe {
     id: number,
-    name: string,
+    title: string,
+    categories: string [],
     description: string,
-    image: string,
-    steps : string [],
-    tags : string [],
+    image_url: string,
     ingredients : string []
+    instructions : string [],
+    tags : string []
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, shareReplay } from 'rxjs';
+import { Observable, catchError, shareReplay } from 'rxjs';
 import { Recipe } from '../models/recipe';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Recipe } from '../models/recipe';
 })
 export class RecipesService {
 
-  apiUrl = 'https://recipesapi.kutaybekleric.com/recipes';
+  apiUrl = 'https://recipes-json-server.onrender.com/recipes';
 
   constructor(private http: HttpClient) { }
 
@@ -21,7 +21,6 @@ export class RecipesService {
 
   getRecipeById(id: number): Observable<Recipe> {
     return this.http.get<Recipe>(`${this.apiUrl}/${id}`).pipe(
-      map((data) => (Array.isArray(data) && data.length > 0 ? data[0] : null)),
       catchError((err: Error) => {
         throw err.message;
       })
