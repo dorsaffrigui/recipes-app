@@ -9,9 +9,9 @@
       <p>
         {{ recipe.description }}
       </p>
-      <mat-chip-set *ngIf="recipe.tags">
-        <mat-chip class="example-box" *ngFor="let tag of recipe.categories">
-          {{ tag }}
+      <mat-chip-set *ngIf="recipe.categories">
+        <mat-chip class="example-box" *ngFor="let cat of recipe.categories">
+          {{ cat }}
         </mat-chip>
       </mat-chip-set>
     </mat-card-content>

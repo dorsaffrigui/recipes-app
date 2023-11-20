@@ -5,6 +5,5 @@ export interface Recipe {
     description: string,
     image_url: string,
     ingredients : string []
-    instructions : string [],
-    tags : string []
+    instructions : string []
 }

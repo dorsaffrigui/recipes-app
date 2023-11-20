@@ -57,8 +57,8 @@ export class RecipesComponent {
       recipes.filter(
         (recipe: Recipe) =>
           recipe.title.toLowerCase().includes(searchKey.toLowerCase()) ||
-          recipe.tags.some((tag: string) =>
-            tag.toLowerCase().includes(searchKey.toLowerCase())
+          recipe.categories.some((cat: string) =>
+            cat.toLowerCase().includes(searchKey.toLowerCase())
           )
       )
     )
