@@ -1,5 +1,3 @@
-
-
 :host {
   position: relative;
   top: 7em;
@@ -16,20 +14,20 @@
     height: 400px;
     object-fit: cover;
   }
-  
+
   h1 {
-    font-size: clamp(24px, 4vw, 52px);
+    font-size: var(--h1-text);
   }
-  
+
   h2 {
-    font-size: clamp(16px, 4vw, 32px);
+    font-size: var(--h2-text);
   }
-  
+
   p,
   ol,
   ul li {
     font-size: 16px;
-    color: #86939e;
+    color: var(--text-body);
   }
 }
 

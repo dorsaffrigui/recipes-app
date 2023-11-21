@@ -1,11 +1,13 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
 :root {
---bg-color: whitesmoke;
---text-color: #43484d;
---text-alert: #f44336;
---text-link: #3f51b5;
+    --bg-color: whitesmoke;
+    --text-color: #43484d;
+    --text-alert: #f44336;
+    --text-link: #3f51b5;
+    --text-body: #86939e;
+    --h1-text: clamp(24px, 6vw, 56px);
+    --h2-text: clamp(16px, 4vw, 32px);
 }
 
 html,

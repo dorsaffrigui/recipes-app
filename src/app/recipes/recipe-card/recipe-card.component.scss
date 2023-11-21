@@ -14,8 +14,14 @@ mat-card {
   flex: 1
 }
 
+mat-card-header{
+  align-self: center;
+}
+
 mat-card-title {
   color: var(--text-color);
+  padding-bottom: 16px;
+  font-size: 18px;
 }
 
 mat-card-actions {
