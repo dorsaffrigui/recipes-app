@@ -1,7 +1,7 @@
 # Recipes App
 
 An angular application that displays recipes from this
-[API](https://recipesapi.kutaybekleric.com/recipes/)
+[API](https://recipes-json-server.onrender.com)
 , allows filtering, and provides more details about a specific recipe.
 
 ## Demo
