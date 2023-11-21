@@ -1,5 +1,13 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+
+:root {
+--bg-color: whitesmoke;
+--text-color: #43484d;
+--text-alert: #f44336;
+--text-link: #3f51b5;
+}
+
 html,
 body {
     height: 100%;
@@ -8,7 +16,7 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-weight: 300;
-    color: #43484d;
+    color: var(--text-color);
     line-height: 24px;
-    background: whitesmoke;
+    background: var(--bg-color);
 }

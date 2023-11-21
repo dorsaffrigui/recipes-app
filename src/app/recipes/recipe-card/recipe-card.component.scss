@@ -11,10 +11,11 @@ img {
 
 mat-card {
   padding: 16px;
+  flex: 1
 }
 
 mat-card-title {
-  color: #43484d;
+  color: var(--text-color);
 }
 
 mat-card-actions {

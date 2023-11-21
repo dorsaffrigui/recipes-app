@@ -1,5 +1,7 @@
 :host {
   padding: 32px;
+  position: relative;
+  top: 7em
 }
 
 .content {
@@ -14,8 +16,16 @@
 }
 
 .alert {
-  color: #f44336;
-  margin-left: 32px;
+  color: var(--text-alert);
+  margin-left: 24px;
+}
+
+.info{
+ display:flex;
+
+ div {
+  margin-left: 8px;
+ }
 }
 
 @media only screen and (min-width: 300px) {

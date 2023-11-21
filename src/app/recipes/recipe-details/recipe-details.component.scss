@@ -1,9 +1,15 @@
+
+
+:host {
+  position: relative;
+  top: 7em;
+}
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 32px;
+  padding: 0px 32px;
 
   img {
     width: 400px;
@@ -12,7 +18,7 @@
   }
   
   h1 {
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(24px, 4vw, 52px);
   }
   
   h2 {
@@ -28,6 +34,6 @@
 }
 
 .alert {
-  color: #f44336;
+  color: va(--text-alert);
   margin-left: 32px;
 }

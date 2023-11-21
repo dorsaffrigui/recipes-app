@@ -8,6 +8,10 @@
   <div *ngIf="recipesFiltered$ | async as recipes" class="cards">
     <app-recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"
       (cardClicked)="goToPage($event)"></app-recipe-card>
+      <div *ngIf="!recipes || recipes.length === 0" class="info">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="info_outline"></mat-icon>
+        <div> No recipes match your criteria</div>
+      </div>
   </div>
 </div>
 
